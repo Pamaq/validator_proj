@@ -25,3 +25,27 @@
 // });
 
 // second form
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const passwordcheck = document.getElementById("passwordcheck");
+const usernameError = document.getElementById("usernameError");
+const submit = document.querySelector("button");
+
+submit.addEventListener("click", () => {
+	if (username.value === "" || username.value === null) {
+		usernameError.style.visibility = "visible";
+		// document.getElementsByClassName("fa-exclamation-circle").style.visibility =
+		// 	"visible";
+		usernameError.textContent = "Username is required!";
+	}
+	if (username.value.length > 0 && username.value.length < 7) {
+		usernameError.style.visibility = "visible";
+		usernameError.textContent = "Username must be at least 7 characters long!";
+	}
+});
+// form.addEventListener("submit", (e) => {
+// 	if (username.value === "" || username.value === null) {
+// 		usernameError.value = "Name is required!";
+// 	}
+// });
