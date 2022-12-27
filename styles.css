@@ -26,7 +26,7 @@ body {
 
 h1 {
 	font-size: 1rem;
-	font-style: bold;
+	font-weight: 700;
 	text-align: left;
 	padding: 1rem;
 	background-color: rgba(247, 244, 248, 0.86);
@@ -39,21 +39,22 @@ h1 {
 #submit {
 	background-color: rgb(159, 84, 188);
 	color: white;
-	border: 0;
+	border: solid 1px grey;
 	border-radius: 5%;
 	font-size: 0.75rem;
 	padding: 0.5rem;
 	height: 30px;
 	width: 100%;
+	overflow: hidden;
 }
 
 div > label {
 	font-size: 0.9rem;
-	font-style: bold;
+	font-weight: 600;
 	display: block;
 }
 
-form > div {
+form > div.data {
 	margin: 1.4rem;
 	width: auto;
 	display: block;
@@ -61,4 +62,10 @@ form > div {
 
 input {
 	width: auto;
+	font-size: 0.8rem;
+}
+
+div.error {
+	font-size: 0.75rem;
+	color: red;
 }
