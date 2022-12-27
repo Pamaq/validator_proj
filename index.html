@@ -8,8 +8,9 @@
 		<link href = "styles.css" rel="stylesheet"></href>
 	</head>
 	<body>
-    <div id="error"></div>
-    <form id ="form" action="/" method="GET">
+    <!-- first form -->
+    <!-- <div id="error"></div> -->
+    <!-- <form id ="form" action="/" method="GET">
       <div>
         <label for="name">Name</label>
         <input id="name" name="name" type="text" required>
@@ -19,7 +20,30 @@
         <input id="password" name="password" type="text">
       </div>
       <button type="submit">Submit</button>
-    </form>
+    </form> -->
+    <!-- second form  -->
+    <div id="window">
+      <h1>Create Account</h1>
+      <form id="form">  
+        <div>
+        <label for="username">Username</label>
+        <input id="username" name="User123" type="text" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="funnyname@mymail.com" type="text" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="Password" type="text" required>
+      </div>
+      <div>
+        <label for="passwordcheck">Password check</label>
+        <input id="passwordcheck" name="Password" type="text" required>
+      </div>
+        <button id="submit">Submit</button>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
