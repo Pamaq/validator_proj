@@ -71,9 +71,12 @@ input {
 div.message {
 	visibility: hidden;
 	font-size: 0.75rem;
-	color: #e74c3c;;
+	color: #e74c3c;
 }
 
+#email {
+	overflow: hiddenf;
+}
 .fa-exclamation-circle {
 	visibility: hidden;
 }

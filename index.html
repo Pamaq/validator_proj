@@ -29,30 +29,28 @@
 
         <div class="data form-control" id="first">
         <label for="username">Username</label>
-        <input id="username" name="username" placeholder="User123" type="text" required>
-        <i class="fa-solid fa-check-circle"></i>
-        <i class="fa-solid fa-exclamation-circle"></i>
+        <input id="username" name="username" placeholder="User123" type="text" maxlength="12" required>
+        <i class="fa-solid fa-check-circle"></i> <i class="fa-solid fa-exclamation-circle"></i>
         <div class ="message" id="usernameError"></div>
       </div>
 
       <div class="data form-control" id="second">
         <label for="email">Email</label>
-        <input id="email" name="email" placeholder="user123@mymail.com" type="text" required>
-        <i class="fa-solid fa-check-circle"></i>
-        <i class="fa-solid fa-exclamation-circle"></i>
-        <div class ="message" id="emailError">Error message!</div>
+        <input id="email" name="email" placeholder="user123@mymail.com" type="text" maxlength="50" required>
+        <i class="fa-solid fa-check-circle"></i> <i class="fa-solid fa-exclamation-circle"></i>
+        <div class ="message" id="emailError"></div>
       </div>
 
       <div class="data form-control">
         <label for="password">Password</label>
-        <input id="password" name="password" placeholder="Password" type="text" required>
+        <input id="password" name="password" placeholder="Password" type="text" maxlength="22" id="third" required>
         <i class="fa-solid fa-check-circle"></i>
         <i class="fa-solid fa-exclamation-circle"></i>
         <div class="message" id="passwordError">Error message!</div>
       </div>
       <div class="data form-control">
         <label for="passwordcheck">Password check</label>
-        <input id="passwordcheck" name="passwordcheck" placeholder="Password" type="text" required>
+        <input id="passwordcheck" name="passwordcheck" placeholder="Password" type="text" maxlength="22" required>
         <i class="fa-solid fa-check-circle"></i>
         <i class="fa-solid fa-exclamation-circle"></i>
         <div class="message" id="passwordCheckError">Error message!</div>

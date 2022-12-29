@@ -26,11 +26,12 @@
 
 // second form
 const username = document.getElementById("username");
-const first = document.getElementById("first");
-const second = document.getElementById("second");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const passwordCheck = document.getElementById("passwordcheck");
+const first = document.getElementById("first");
+const second = document.getElementById("second");
+const third = document.getElementById("third");
 const usernameError = document.getElementById("usernameError");
 const emailError = document.getElementById("emailError");
 const submit = document.querySelector("button");
@@ -57,18 +58,33 @@ const checkUsername = () => {
 };
 
 const checkEmail = () => {
-	const asperand = "@";
-	if (email.value === "" || email.value === null) {
-		emailError.style.visibility = "visible";
-		emailError.textContent = "Email is required!";
-		second.classList.add("error");
-	} else if (email.value.includes(asperand) == 0) {
-		emailError.style.visibility = "visible";
-		emailError.textContent = "Wrong formula!";
-		second.classList.add("error");
-	} else {
+	const pattern = /^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$/i;
+	if (email.value.match(pattern)) {
 		second.classList.add("success");
 		second.classList.remove("error");
 		emailError.style.visibility = "hidden";
+	} else if (email.value == "" || email.value === null) {
+		emailError.style.visibility = "visible";
+		emailError.textContent = "Email is required!";
+		second.classList.add("error");
+	} else {
+		emailError.style.visibility = "visible";
+		emailError.textContent = "Wrong pattern!";
+		second.classList.add("error");
 	}
 };
+
+// if (email.value === "") {
+// 	emailError.style.visibility = "visible";
+// 	emailError.textContent = "Email is required!";
+// 	second.classList.add("error");
+// } else if (email.match(pattern)) {
+// 	second.classList.add("success");
+// 	second.classList.remove("error");
+// 	emailError.style.visibility = "hidden";
+// } else {
+// 	emailError.style.visibility = "visible";
+// 	emailError.textContent = "Wrong pattern!";
+// 	second.classList.add("error");
+// }
+// };
